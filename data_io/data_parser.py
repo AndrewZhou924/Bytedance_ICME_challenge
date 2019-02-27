@@ -20,7 +20,7 @@ class PosShifts(object):
   @staticmethod
   def get_features_num():
     index_shift = PosShifts._shifts
-    all_shift = reduce(lambda x, y: x+y, index_shift)
+    all_shift = reduce(lambda x, y: x+y, index_shift) # reduce() 函数会对参数序列中元素进行累积（此处是求和）
     return all_shift
 
 
@@ -60,7 +60,7 @@ class LineParser(object):
 
 class DataParser(object):
   """
-  Detailed operator foe line input
+  Detailed operator for line input
   """
   @staticmethod
   def data_parser(line, label_index):
